@@ -8,49 +8,34 @@ describe "Static pages" do
     before { visit root_path }
 
     it { should have_selector('h1', text: 'Sample App') }
-    it { should have_selector 'title', text: "Ruby on Rails Tutorial: Sample App" }
+    it { should have_selector('title', text: full_title('')) }
     it { should_not have_selector 'title', text: '| Home' }
   end
 
   describe "Help page" do 
 
-    it "should have the h1 'Help'" do 
-      visit help_path
-      page.should have_selector('h1', text: 'Help')
-    end 
+    before { visit  help_path }
 
-    it "should have the title 'Help'" do 
-      visit help_path
-      page.should have_selector('title',
-                        text: "Ruby on Rails Tutorial Sample App | Help")
-    end 
-  end 
+    it { should have_selector('h1',  text: 'Help') }
+    it { should have_selector('title', text: full_title('Help')) }
 
-  describe "About page" do 
+  end
 
-    it "should have the h1 'About'" do 
-      visit about_path
-      page.should have_selector('h1', text: 'About Us')
-    end 
+    describe "About page" do 
 
-    it "should have the title 'About Us'" do 
-      visit about_path
-      page.should have_selector('title',
-                    text: "Ruby on Rails Tutorial Sample App | About Us")
-    end 
-  end 
+    before { visit  about_path }
 
-    describe "Contact page" do 
+    it { should have_selector('h1',  text: 'About') }
+    it { should have_selector('title', text: full_title('About Us')) }
 
-    it "should have the h1 'Contact'" do 
-      visit contact_path
-      page.should have_selector('h1', text: 'Contact')
-    end 
+  end
 
-    it "should have the title 'Contact'" do 
-      visit contact_path
-      page.should have_selector('title',
-                    text: "Ruby on Rails Tutorial Sample App | Contact")
-    end
+  describe "Contact page" do 
+
+    before { visit  contact_path }
+
+    it { should have_selector('h1',  text: 'Contact') }
+    it { should have_selector('title', text: full_title('Contact')) }
+
   end
 end
