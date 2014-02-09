@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     annotate (2.4.1.beta1)
     arel (3.0.2)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (2.0.0)
     builder (3.0.4)
     capybara (1.1.2)
@@ -74,6 +75,10 @@ GEM
     pg (0.12.2)
     pg (0.12.2-x86-mingw32)
     polyglot (0.3.3)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     pry (0.9.12.6-x86-mingw32)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -155,6 +160,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 2.4.1.beta)
+  bcrypt-ruby (= 3.0.1)
   bootstrap-sass (= 2.0.0)
   capybara (= 1.1.2)
   coffee-rails (= 3.2.2)
