@@ -32,6 +32,6 @@ SampleApp::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
-  # Expands the lines which load the assets
+  # Expands the lines which load the assets, commented out to make dropdown box work
   # config.assets.debug = true
 end
